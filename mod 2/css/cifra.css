@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 100px 600px auto;
+  background: #1152F6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+
+  70% {
+    width: 100%;
+  }
+}
+
+.principal {
+  color: #760FD4;
+  position: relative;
+  padding: 20px;
+  margin: 30px;
+  width: fit-content;
+  background: #0F13D4;
+  overflow: unset;
+  border-radius: 6px;
+}
+
+.principal img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+
+}
+
+.principal h1 {
+  margin: 20px;
+}
+
+.principal h2 {
+  text-align: center;
+  margin: 20px;
+}
+
+.cifra {
+  text-align: center;
+  line-height: 30px;
+}
+
+.radioCod {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 0;
+}
+
+fieldset {
+  border: none;
+}
+
+#botaoResultado {
+  background: #0f1923;
+  color: #760FD4;
+  margin: 2% 0;
+  width: 50%;
+  height: 40px;
+  border: 1px solid #C711F6;
+  box-shadow: 2px 3px 5px #1152F6;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.divChave {
+  display: none;
+}
+
+.divChave input {
+  color: aquamarine;
+  background: #0f1923;
+  width: 50%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 2px 3px 5px #47daff;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+
+.principal::before,
+.principal::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: #333;
+  border-radius: 8px;
+  background-image: linear-gradient(45deg, #7fffd4);
+  background-size: 500%;
+  animation: position_borda 12s linear infinite alternate;
+  z-index: -1;
+}
+
+.principal::after {
+  filter: blur(20px);
+}
+
+
+
+@media (max-width: 700px) {
+  .container {
+    width: auto;
+  }
+
+  h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .radioCod {
+    display: block;
+  }
+
+  #botaoResultado {
+    font-size: 15px;
+    height: 45px;
+  }
+}
+
+footer {
+  text-align: center;
+  margin: 2.3%;
+}
